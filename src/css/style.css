@@ -147,7 +147,7 @@
       padding: 80px 0 60px;
       overflow: hidden;
       isolation: isolate;
-      background-image: url('/assets/images/elizaveta.jpeg');
+      background-image: url('../../assets/images/elizaveta.jpeg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
