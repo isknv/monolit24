@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONOLIT 24 — Премиальные монолитные работы</title>
+  <meta name="description" content="Monolit 24 – 24 года опыта в монолитном строительстве. Качество выше скорости. Работаем по всему Кыргызстану." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+
+  <!-- GSAP & ScrollTrigger -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./src/js/script.js" defer></script>
+
+  <style>
+    /* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ ===== */
+    /* (стили из вашего style.css уже подгружаются, но если что-то не работает, можно продублировать) */
+  </style>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__logo"><img class="preloader__logoo" src="./assets/icons/mainlogo.png" alt=""></div>
+    <div class="preloader__bar"><div class="preloader__bar-fill" id="preloaderFill"></div></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__brand">
+      <span class="header__brand-main"><img class="header__brand-main" src="./assets/icons/mainlogo.png" alt=""></span>
+      <span class="header__brand-sub">Concrete Works</span>
+    </div>
+    <div class="header__lang" id="langSwitcher">
+      <button class="header__lang-btn active" data-lang="ru">РУ</button>
+      <button class="header__lang-btn" data-lang="ky">КЫР</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <div class="hero__badge" data-i18n="hero.badge">Монолитные работы любой сложности</div>
+      <h1 class="hero__title">
+        Мы строим <span class="hero__highlight" id="heroChangingWord">качество</span>
+      </h1>
+      <p class="hero__slogan" style="font-size: 1.2rem; color: rgba(255,255,255,0.5); margin-top: -10px;" data-i18n="hero.slogan">
+        MONOLIT 24 — 24 года опыта
+      </p>
+      <div class="hero__actions">
+        <a href="#contacts" class="btn btn-primary" data-i18n="hero.cta1">Связаться</a>
+        <a href="tel:+996702814294" class="btn btn-phone"><i class="fas fa-phone"></i> +996 702 814 294</a>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="about.kicker">О компании</div>
+        <h2 class="section__title" data-i18n="about.title">Строим будущее <br>с 2002 года</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal" data-i18n="about.text">
+          <p><strong>Monolit 24</strong> — команда профессионалов с 24-летним опытом в монолитном строительстве. Мы выполняем работы любой сложности: от фундаментов до многоэтажных каркасов. Наша философия — <strong>качество выше скорости</strong>, но мы всегда соблюдаем сроки.</p>
+          <p style="margin-top: 16px;">Работаем по всему Кыргызстану, имеем 5 собственных бригад (до 20 человек каждая), оснащённых профессиональным оборудованием. Все договоры официальные, есть допуски СРО.</p>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="about-highlight">
+            <div class="about-highlight__number">24</div>
+            <div class="about-highlight__label" data-i18n="about.highlight1">года опыта</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight__number">200+</div>
+            <div class="about-highlight__label" data-i18n="about.highlight2">реализованных объектов</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight__number">5</div>
+            <div class="about-highlight__label" data-i18n="about.highlight3">собственных бригад</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight__number">100%</div>
+            <div class="about-highlight__label" data-i18n="about.highlight4">контроль качества</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="services.kicker">Услуги</div>
+        <h2 class="section__title" data-i18n="services.title">Монолитные работы <br>любой сложности</h2>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="projects.kicker">Объекты</div>
+        <h2 class="section__title" data-i18n="projects.title">Наши реализованные проекты</h2>
+        <p class="section__sub" data-i18n="projects.sub">Фото и видео с наших строительных площадок</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="advantages.kicker">Преимущества</div>
+        <h2 class="section__title" data-i18n="advantages.title">Почему выбирают нас</h2>
+      </div>
+      <div class="advantages-grid" id="advantagesGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="process.kicker">Процесс работы</div>
+        <h2 class="section__title" data-i18n="process.title">От заявки до сдачи</h2>
+      </div>
+      <div class="process-steps" id="processSteps"></div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="section" id="technology">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="technology.kicker">Технология</div>
+        <h2 class="section__title" data-i18n="technology.title">Монолитное строительство<br>от А до Я</h2>
+        <p class="section__sub" data-i18n="technology.sub">Каждый этап – под контролем наших инженеров</p>
+      </div>
+      <div class="technology-grid-compact" id="technologyGrid"></div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section" id="partners" style="padding: 40px 0;">
+    <div class="container">
+      <div class="section__header reveal" style="margin-bottom: 30px;">
+        <div class="section__kicker" data-i18n="partners.kicker">Партнёры</div>
+        <h2 class="section__title" data-i18n="partners.title">С нами работают</h2>
+      </div>
+    </div>
+    <div class="partners-marquee">
+      <div class="partners-track" id="partnersTrack1"></div>
+    </div>
+    <div class="partners-marquee partners-marquee--reverse">
+      <div class="partners-track" id="partnersTrack2"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section" id="contacts">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__kicker" data-i18n="contacts.kicker">Контакты</div>
+        <h2 class="section__title" data-i18n="contacts.title">Свяжитесь с нами</h2>
+        <p class="section__sub" data-i18n="contacts.sub">Мы всегда на связи и готовы обсудить ваш проект</p>
+      </div>
+      <div class="contacts-grid" id="contactsGrid"></div>
+      <div style="margin-top: 40px; text-align: center;">
+        <a href="tel:+996702814294" class="btn btn-primary" style="background: #25D366; color: #fff; box-shadow: 0 12px 30px rgba(37,211,102,0.3);">
+          <i class="fas fa-phone"></i> Позвонить
+        </a>
+        <a href="https://wa.me/996702814294" target="_blank" class="btn btn-primary" style="background: #25D366; color: #fff; margin-left: 12px; box-shadow: 0 12px 30px rgba(37,211,102,0.3);">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p data-i18n="footer.copyright">© 2026 MONOLIT 24. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-buttons">
+    <a href="tel:+996702814294" class="floating-btn floating-btn--phone" aria-label="Позвонить">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/996702814294" target="_blank" class="floating-btn floating-btn--whatsapp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
