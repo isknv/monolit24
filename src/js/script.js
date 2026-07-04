@@ -172,9 +172,24 @@
         { step: '04', title_ru: 'Уход за бетоном', title_ky: 'Бетонго кам көрүү', desc_ru: 'Поддержание влажности в первые дни твердения. Не допускаем пересыхания – сохраняем прочность.', desc_ky: 'Катуунун алгачкы күндөрүндө нымдуулукту сактоо. Кургап калбашына жол бербейбиз – бекемдикти сактайбыз.', img: 'assets/images/technology/uhod.jpg' }
       ],
       contacts: [
-        { icon: 'fas fa-phone', label_ru: 'Телефон', label_ky: 'Телефон', value: '+996 702 814 294', href: 'tel:+996702814294' },
-        { icon: 'fab fa-whatsapp', label_ru: 'WhatsApp', label_ky: 'WhatsApp', value: '+996 702 814 294', href: 'https://wa.me/996702814294' }
-      ]
+  { 
+    icon: 'fas fa-user', 
+    label_ru: 'Асхат Чаргынов', 
+    label_ky: 'Асхат Чаргынов', 
+    value: '+996 702 814 294', 
+    href: 'tel:+996702814294' 
+  },
+  { 
+    icon: 'fas fa-user', 
+    label_ru: 'Бактияр Чаргынов', 
+    label_ky: 'Бактияр Чаргынов', 
+    value: '+996 705 777 813', 
+    href: 'tel:+996705777813' 
+  },
+  // Остальные контакты (WhatsApp, Email, Адрес) оставляем как есть
+  { icon: 'fab fa-whatsapp', label_ru: 'Асхат Чаргынов', label_ky: 'Асхат Чаргынов', value: '+996 702 814 294', href: 'https://wa.me/996702814294' },
+  { icon: 'fab fa-whatsapp', label_ru: 'Бактияр Чаргынов', label_ky: 'Бактияр Чаргынов', value: '+996 705 777 813', href: 'https://wa.me/996705777813' },
+],
     };
 
     // ============================================================
